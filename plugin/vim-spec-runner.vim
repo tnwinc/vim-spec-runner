@@ -49,20 +49,3 @@ endfun
 fun! DebugSpecificTestsInITerm()
   echo system("osascript ".s:current_path."/sendCommand.scpt specs_local \"shopt -s globstar nullglob\n export PS1=\n cd " . getcwd() . "\nclear\n rake test debug=true " . expand("%:p") . "\n\" focus")
 endfun
-
-
-" Sample mappings using ITerm
-"map <leader>T :call RunAllTestsInITerm()<CR>
-"map <leader>t :call RunLocalTestsInITerm()<CR>
-"map <leader>t. :call RunSpecificTestsInITerm()<CR>
-"map <leader>D :call DebugAllTestsInITerm()<CR>
-"map <leader>d :call DebugLocalTestsInITerm()<CR>
-"map <leader>d. :call DebugSpecificTestsInITerm()<CR>
-
-" Sample mappings using Screen
-"map <leader>T :call RunAllTestsInScreen()<CR>
-"map <leader>t :call RunLocalTestsInScreen()<CR>
-"map <leader>t. :call RunSpecificTestsInScreen()<CR>
-"map <leader>D :call DebugAllTestsInScreen()<CR>
-"map <leader>d :call DebugLocalTestsInScreen()<CR>
-"map <leader>d. :call DebugSpecificTestsInScreen()<CR>
