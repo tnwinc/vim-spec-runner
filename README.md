@@ -3,6 +3,8 @@ vim-spec-runner
 
 Vim Commands to execute mocha specs
 
+See it in action: http://www.youtube.com/watch?v=ZOW4V4iRMJc
+
 This vimscript exposes functions to run specs in either named screen sessions or iTerm2, whichever you prefer
 
 If you are using janus, these mappings should probably go in ~/.vimrc.after
