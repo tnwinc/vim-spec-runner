@@ -19,6 +19,7 @@ map <leader>t. :call RunSpecificTestsInITerm()<CR>
 map <leader>D :call DebugAllTestsInITerm()<CR>
 map <leader>d :call DebugLocalTestsInITerm()<CR>
 map <leader>d. :call DebugSpecificTestsInITerm()<CR>
+map <leader>tl :call RunLastTestsInITerm()<CR>
 ```
 
 Mappings for use with Screen
@@ -31,4 +32,5 @@ map <leader>t. :call RunSpecificTestsInScreen()<CR>
 map <leader>D :call DebugAllTestsInScreen()<CR>
 map <leader>d :call DebugLocalTestsInScreen()<CR>
 map <leader>d. :call DebugSpecificTestsInScreen()<CR>
+map <leader>tl :call RunLastTestsInScreen()<CR>
 ```
