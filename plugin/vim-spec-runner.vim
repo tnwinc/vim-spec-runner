@@ -24,6 +24,10 @@ fun! RunSpecificTestsInScreen()
   echo system("screen -S specs -p 0 -X stuff 'shopt -s globstar nullglob\n export PS1=\n cd " . expand("%:p:h")  . "\nclear\n rake test reporter=spec " . expand("%:p") . "\n'")
 endfun
 
+fun! RunLastTestsInScreen()
+  echo system("screen -S specs -p 0 -X stuff 'shopt -s globstar nullglob\n export PS1=\n cd " . expand("%:p:h")  . "\nclear\n rake test rerun=true\n'")
+endfun
+
 
 
 fun! RunAllTestsInITerm()
@@ -48,4 +52,8 @@ endfun
 
 fun! DebugSpecificTestsInITerm()
   echo system("osascript ".s:current_path."/sendCommand.scpt specs_local \"shopt -s globstar nullglob\n export PS1=\n cd " . expand("%:p:h") . "\nclear\n rake test debug=true " . expand("%:p") . "\n\" focus")
+endfun
+
+fun! RunLastTestsInITerm()
+  echo system("osascript ".s:current_path."/sendCommand.scpt specs_local \"shopt -s globstar nullglob\n export PS1=\n cd " . expand("%:p:h")  . "\nclear\n rake test rerun=true\n\"")
 endfun
