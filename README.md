@@ -9,6 +9,18 @@ This vimscript exposes functions to run specs in either named screen sessions or
 
 If you are using janus, these mappings should probably go in ~/.vimrc.after
 
+Install and configure Bash 4 
+----------------------------
+```
+brew install bash
+```
+
+Add /usr/local/bin/bash to /etc/shells file
+
+Make bash4 your default login shell by doing the following
+
+Preferences -> Users and Groups -> right click on your username -> Advanced Options
+
 Mappings for use with iTerm2
 ----------------------------
 
@@ -34,3 +46,4 @@ map <leader>d :call DebugLocalTestsInScreen()<CR>
 map <leader>d. :call DebugSpecificTestsInScreen()<CR>
 map <leader>tl :call RunLastTestsInScreen()<CR>
 ```
+
