@@ -47,7 +47,8 @@ class DebugAllSpecs(sublime_plugin.TextCommand):
             "osascript",
             applescript,
             "spec_all",
-            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true; focus"
+            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true;",
+            "focus"
         ]
     })
 
@@ -58,7 +59,8 @@ class DebugLocalSpecs(sublime_plugin.TextCommand):
             "osascript",
             applescript,
             "specs_local",
-            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true " + get_file_path(self.view.file_name()) + "*.spec.js " + get_file_path(self.view.file_name()) + "*/*.spec.js; focus"
+            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true " + get_file_path(self.view.file_name()) + "*.spec.js " + get_file_path(self.view.file_name()) + "*/*.spec.js",
+            "focus"
         ]
     })
 
@@ -69,7 +71,8 @@ class DebugSpecificSpecs(sublime_plugin.TextCommand):
             "osascript",
             applescript,
             "specs_local",
-            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true " + self.view.file_name() + "; focus"
+            "shopt -s globstar nullglob; export PS1=; cd " + get_file_path(self.view.file_name()) + "; clear; rake test debug=true " + self.view.file_name(),
+            "focus"
         ]
     })
 
